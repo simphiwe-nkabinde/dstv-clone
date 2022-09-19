@@ -1,85 +1,31 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+const mainLinks = ['watch', 'discover', 'buy', 'rewards', 'myDstv', 'help']
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+  <header class="bg-gray-900 flex text-gray-200 px-10 py-9">
+    <img alt="" class="" src="@/assets/images/logo.svg" width="125" height="125" />
+    <div class="block h-5 w-5 mx-5 grid grid-cols-3 grid-rows-3 gap-1 self-center group">
+      <span v-for="n in 9" class="w-1 h-1 bg-gray-500 group-hover:bg-gray-200"></span>
+    </div>
+    <div>
+      <nav class="flex">
+        <ul class="flex font-light">
+          <li v-for="link in mainLinks" class="mx-2 capitalize hover:text-blue-500">
+            <RouterLink :to="`/${link}`">{{link}}</RouterLink>
+          </li>
+        </ul>
+        <ul class="">
+          <RouterLink to="/signin">Sign in</RouterLink>
+          <RouterLink to="/signin">Sign in</RouterLink>
+        </ul>
       </nav>
     </div>
   </header>
 
   <RouterView />
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
