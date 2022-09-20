@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <nav class="bg-gray-800 bg-opacity-30 ss-bottom-fast py-2 text-white absolute w-full">
+    <nav class="bg-gray-800 bg-opacity-30 ss-bottom-fast py-2 text-white absolute w-full shadow">
         <ul class="flex justify-center">
             <li v-for="subLink in activeLink.sub"
                 class="mx-3 ss-center capitalize hover:text-blue-500 transition">

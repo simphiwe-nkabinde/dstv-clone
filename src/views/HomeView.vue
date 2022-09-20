@@ -8,11 +8,11 @@ const banner = { category: 'news', title: 'The Final Farewell', image: 'queen.jp
     <p class="uppercase mb-3 font-bold">{{banner.category}}</p>
     <h1 class="text-5xl font-bold">{{banner.title}}</h1>
     <p class="my-7">{{banner.info}}</p>
-    <button class="bg-white text-black text-lg py-2 px-8 font-bold rounded-3xl">{{banner.action}}</button>
+    <button class="bg-white text-black text-lg py-2 px-8 font-bold rounded-3xl hover:text-white hover:bg-blue-500 transition">{{banner.action}}</button>
     
     <div class="mt-20 flex">
-      <button v-for="n in 4" class="text-center hover:bg-blue-500 rounded-full hover:border-2 hover:border-red-500 transition">
-        <span class="inline-block w-2 h-2 mr-8 mx-auto bg-white hover:bg-blue-500 rounded-full"></span>
+      <button v-for="n in 4" class="mx-3  text-center rounded-full border-2 p-1 border-transparent hover:border-blue-500 transition">
+        <span class="block w-2 h-2 bg-white hover:bg-blue-500 rounded-full"></span>
       </button>
     </div>
   </section>
