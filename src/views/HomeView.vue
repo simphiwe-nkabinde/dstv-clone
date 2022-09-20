@@ -1,6 +1,13 @@
 <script setup>
 
 const banner = { category: 'news', title: 'The Final Farewell', image: 'queen.jpg', info: 'Seven decades at the helm: A spotlight on her Majesty, Queen Elizabeth II', action: 'Find Out More', actionLink: '/discover/news/60852/queen-elizabeth-ii' }
+
+const promos = [
+  {title: 'Internet for everyone', image: '', content: 'NO FIBRE? NO PROBLEM!'},
+  {title: 'Unlock yours today', image: '', content: 'Its too easy to get rewarded'},
+  {title: 'Get it Today', image: '', content: 'Add movie channels to your package'},
+  {title: 'MyDstv App', image: '', content: 'Download the'},
+]
 </script>
 
 <template>
@@ -16,6 +23,20 @@ const banner = { category: 'news', title: 'The Final Farewell', image: 'queen.jp
       </button>
     </div>
   </section>
+  <section>
+    <div class="grad-sect"></div>
+    
+    <!-- promos -->
+    <div class="flex justify-around">
+      <div v-for="promo in promos" class="w-48">
+        <img src="https://picsum.photos/200" alt="image" class="w-full rounded">
+        <div class="absolute inset-0p text-red-500 text-center">
+          <p>{{promo.content}}</p>
+        <h3>{{promo.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style>
@@ -23,5 +44,12 @@ const banner = { category: 'news', title: 'The Final Farewell', image: 'queen.jp
   background: linear-gradient(90deg, rgb(1, 0, 22) 0%, rgb(1, 1, 54) 55%, rgb(0, 55, 66) 100%), no-repeat right top;
   background-size: contain;
   height: 500px;
+}
+.grad-sect {
+  background: linear-gradient(180deg, rgba(1, 0, 22, 0.082) 0%, rgb(1, 0, 54) 25%, rgb(1, 0, 22) 100%);
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: -30px;
 }
 </style>
