@@ -8,40 +8,23 @@ import SubNav from './SubNav.vue'
 
 const activeLink = ref(0)
 
-const links = [
-    { main: 'watch', sub: ['stream-now', 'live-tv', 'tv-shows', 'movies', 'sport', 'kids', 'tv-guide', 'boxOffice', 'showmax'] },
-    { main: 'discover', sub: ['tv-guide', 'highlights', 'loving-local', 'best-of-international', 'kids', 'behind-the-screens', 'sport', 'news'] },
-    { main: 'buy' },
-    { main: 'rewards' },
-    { main: 'myDstv' },
-    { main: 'help', sub: ['fix-errors', 'how-to-watch', 'how-to-play', 'find-an-installer', 'find-an-agency', 'faqs', 'contact-us'] }
-]
-
 </script>
     
 <template>
     <div class="fixed w-full">
-        <header class="bg-black flex justify-between text-gray-300 py-5 px-2 items-center">
-            <div class="block h-5 w-5 mx-1 grid grid-cols-3 grid-rows-3 gap-1 self-center group">
+        <header class="bg-black grid grid-cols-3 text-gray-300 py-5 px-2 items-center">
+            <div class="justify-self-start block h-5 w-5 mx-1 grid grid-cols-3 grid-rows-3 gap-1 self-center group">
                 <span v-for="n in 9" class="w-1 h-1 bg-white group-hover:bg-gray-200 transition"></span>
             </div>
             <RouterLink to="/">
-                <img alt="" class="" src="@/assets/images/logo.svg" width="70" />
+                <img alt="" class="justify-self-center" src="@/assets/images/logo.svg" width="70" />
             </RouterLink>
-            <!-- <nav aria-label="main navigation" class="">
-                    <ul class="flex font-light">
-                        <li v-for="link in links" @click="activeLink = link"
-                            class="ss-right mx-2 capitalize hover:text-blue-500 transition">
-                            <RouterLink :to="`/${link.main}`">{{link.main}}</RouterLink>
-                        </li>
-                    </ul>
-                </nav> -->
-
-            <nav aria-label="sub navigation" class="flex items-center">
+            <nav aria-label="sub navigation" class="justify-self-end flex items-center">
                 <!-- <SearchIcon class="w-7 mx-2 hover:text-blue-500 transition" /> -->
                 <UserIcon class="w-8 mx-2 hover:text-blue-500 transition" />
                 <RouterLink to="/signin" class="mx-2 capitalize hover:text-blue-500 transition">sign in</RouterLink>
             </nav>
         </header>
+        <div class="tracking-widest p-2 text-white text-xs bg-black bg-opacity-30 backdrop-blur-15 border border-gray-700 border-opacity-30 shadown text-center">OPEN MENU</div>
     </div>
 </template>

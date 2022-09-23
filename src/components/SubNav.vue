@@ -12,7 +12,7 @@ const navLinks = data.navList;
 
 <template>
     <div class="absolute w-full h-full p-2">
-        <nav class="px-5 py-3 rounded h-full bg-black bg-opacity-60 border border-gray-300 border-opacity-20 text-white overflow-x-scroll">
+        <nav class="backdrop-blur-10 px-5 py-3 rounded h-full bg-black bg-opacity-60 border border-gray-300 border-opacity-20 text-white overflow-x-scroll">
             <button class="float-right text-white">
                 <IconX class="w-6"></IconX>
             </button>
@@ -29,9 +29,3 @@ const navLinks = data.navList;
     </div>
 
 </template>
-
-<style>
-nav {
-    backdrop-filter: blur(10px);
-}
-</style>
