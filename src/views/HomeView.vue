@@ -19,7 +19,7 @@ const promos = [
       <button
         class="bg-white text-black text-lg py-2 px-8 font-bold rounded-3xl hover:text-white hover:bg-blue-500 transition">{{banner.action}}</button>
     </div>
-    <img class="w-72 shadow-xlg skew-x-3 skew-y-3" :src="'src/assets/images/'+banner.image" alt="">
+    <!-- <img class="w-72 shadow-xlg skew-x-3 skew-y-3" :src="'src/assets/images/'+banner.image" alt=""> -->
     <div class="mt-20 flex">
       <button v-for="n in 4"
         class="mx-3  text-center rounded-full border-2 p-1 border-transparent hover:border-blue-500 transition">
@@ -28,18 +28,6 @@ const promos = [
     </div>
   </section>
   <div class="grad-sect"></div>
-  <section class="bg-dark-blue text-white">
-    <!-- promos -->
-    <div class="flex justify-around">
-      <div v-for="promo in promos" class="w-48">
-        <img src="https://picsum.photos/200" alt="image" class="w-full rounded">
-        <div class="absolute inset-0p text-red-500 text-center">
-          <p>{{promo.content}}</p>
-          <h3>{{promo.title}}</h3>
-        </div>
-      </div>
-    </div>
-  </section>
 </template>
 
 <style>

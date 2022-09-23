@@ -1,0 +1,83 @@
+{
+    "navList": [
+        {
+            "main": "Watch",
+            "sub": [
+                "Stream Now",
+                "Live TV",
+                "TV Shows",
+                "Movies",
+                "Sport",
+                "Kids",
+                "TV Guide",
+                "BoxOffice",
+                "Showmax"
+            ]
+        },
+        {
+            "main": "Discover",
+            "sub": [
+                "TV Guide",
+                "Highlights",
+                "Loving Local",
+                "Best of International",
+                "Kids",
+                "Behind the Screens",
+                "Sport",
+                "News"
+            ]
+        },
+        {
+            "main": "Buy",
+            "sub": [
+                "DStv Packages",
+                "DStv Internet",
+                "Hardware & Accessories",
+                "Find an Installer",
+                "DStv Insurance",
+                "DStv Business Packages"
+            ]
+        },
+        {
+            "main": "Rewards",
+            "sub": [
+                "Available Rewards",
+                "Earn More Stars",
+                "What is Rewards",
+                "Competitions",
+                "Rewards History"
+            ]
+        },
+        {
+            "main": "MyDStv",
+            "sub": [
+                "My Dashboard",
+                "Update Details",
+                "My Privacy",
+                "Price Adjustment Letter",
+                "View My Balance",
+                "Pay Now",
+                "Setup Debit Order",
+                "Credit Card Debit Order",
+                "My Statements",
+                "Transaction History",
+                "My Products",
+                "My Insurance",
+                "My Orders",
+                "Notifications"
+            ]
+        },
+        {
+            "main": "Help",
+            "sub": [
+                "Fix Errors",
+                "How to Watch",
+                "How to Pay",
+                "Find an Installer",
+                "Find an Agency",
+                "FAQs",
+                "Contact Us"
+            ]
+        }
+    ]
+}

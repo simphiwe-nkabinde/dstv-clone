@@ -1,22 +1,37 @@
 <script setup>
+import data from '../assets/data.json';
+import IconX from './icons/IconX.vue';
+
 const props = defineProps({
     activeLink: {}
 })
+const navLinks = data.navList;
+
+
 </script>
 
 <template>
-    <nav class="bg-gray-800 bg-opacity-30 ss-bottom-fast py-2 text-white absolute w-full shadow">
-        <ul class="flex justify-center">
-            <li v-for="subLink in activeLink.sub"
-                class="mx-3 ss-center capitalize hover:text-blue-500 transition">
-                <RouterLink :to="`/${this.activeLink.main}/${subLink}`">{{subLink}}</RouterLink>
-            </li>
-        </ul>
-    </nav>
+    <div class="absolute w-full h-full p-2">
+        <nav class="px-5 py-3 rounded h-full bg-black bg-opacity-60 border border-gray-300 border-opacity-20 text-white overflow-x-scroll">
+            <button class="float-right text-white">
+                <IconX class="w-6"></IconX>
+            </button>
+            <div class="grid grid-cols-2 gap-3">
+                <ul v-for="links in navLinks" class="mb-5">
+                    <h2 class="font-bold text-xl border-b border-gray-300 border-opacity-20 pb-2">{{links.main}}</h2>
+                    <li v-for="link in links.sub" class="my-2">
+                        <RouterLink :to="`/${link}`">{{link}}</RouterLink>
+                    </li>
+                </ul>                
+            </div>
+
+        </nav>
+    </div>
+
 </template>
 
 <style>
 nav {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 </style>
