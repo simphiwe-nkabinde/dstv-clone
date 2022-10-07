@@ -5,6 +5,7 @@ import SubNav from './components/SubNav.vue';
 import HomeView from './views/HomeView.vue';
 
 import { ref } from 'vue'
+import MobileNav from './components/MobileNav.vue';
 
 const displayMenu = ref(true)
 
@@ -20,6 +21,7 @@ function toggleMenu() {
   <span v-if="displayMenu">
     <SubNav @close="displayMenu = false"></SubNav>    
   </span>
+  <MobileNav></MobileNav>
   
   <main>
     <RouterView/>   

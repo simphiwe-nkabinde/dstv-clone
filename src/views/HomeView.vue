@@ -12,7 +12,7 @@ const promos = [
 
 <template>
   <section id="jumbotron" class="text-white px-20 pt-44 pb-2 grid grid-cols-2 grid-rows-2">
-    <div>
+    <div class="hidden">
       <p class="uppercase mb-3 font-bold">{{banner.category}}</p>
       <h1 class="text-5xl font-bold">{{banner.title}}</h1>
       <p class="my-7">{{banner.info}}</p>
@@ -20,7 +20,7 @@ const promos = [
         class="bg-white text-black text-lg py-2 px-8 font-bold rounded-3xl hover:text-white hover:bg-blue-500 transition">{{banner.action}}</button>
     </div>
     <!-- <img class="w-72 shadow-xlg skew-x-3 skew-y-3" :src="'src/assets/images/'+banner.image" alt=""> -->
-    <div class="mt-20 flex">
+    <div class="mt-20 flex hidden">
       <button v-for="n in 4"
         class="mx-3  text-center rounded-full border-2 p-1 border-transparent hover:border-blue-500 transition">
         <span class="block w-2 h-2 bg-white hover:bg-blue-500 rounded-full"></span>
@@ -34,7 +34,7 @@ const promos = [
 #jumbotron {
   background: linear-gradient(90deg, rgb(1, 0, 22) 0%, rgb(1, 1, 54) 55%, rgb(0, 55, 66) 100%), no-repeat right top;
   background-size: contain;
-  height: 500px;
+  height: 100vh;
 }
 
 .grad-sect {
