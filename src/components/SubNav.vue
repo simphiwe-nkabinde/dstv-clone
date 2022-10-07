@@ -2,18 +2,16 @@
 import data from '../assets/data.json';
 import IconX from './icons/IconX.vue';
 
-const props = defineProps({
-    activeLink: {}
-})
+const props = defineProps({close: Object})
 const navLinks = data.navList;
 
 
 </script>
 
 <template>
-    <div class="absolute w-full h-full p-2">
-        <nav class="backdrop-blur-10 px-5 py-3 rounded h-full bg-black bg-opacity-60 border border-gray-300 border-opacity-20 text-white overflow-x-scroll">
-            <button class="float-right text-white">
+    <div class="absolute w-full h-full p-2 ss-top-fast">
+        <nav class="px-5 py-3 rounded h-full bg-black bg-opacity-60 border border-gray-300 border-opacity-20 text-white overflow-x-scroll">
+            <button @click="$emit('close')" class="float-right text-white">
                 <IconX class="w-6"></IconX>
             </button>
             <div class="grid grid-cols-2 gap-3">

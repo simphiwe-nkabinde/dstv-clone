@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.backdrop-blur-5 {
+    backdrop-filter: blur(5px);
+}
 .backdrop-blur-10 {
     backdrop-filter: blur(10px);
 }
