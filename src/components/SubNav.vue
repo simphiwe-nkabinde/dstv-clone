@@ -2,7 +2,6 @@
 import data from '../assets/data.json';
 import IconX from './icons/IconX.vue';
 
-const props = defineProps({close: Object})
 const navLinks = data.navList;
 
 

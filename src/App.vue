@@ -7,12 +7,8 @@ import HomeView from './views/HomeView.vue';
 import { ref } from 'vue'
 import MobileNav from './components/MobileNav.vue';
 
-const displayMenu = ref(true)
+let displayMenu = ref(true)
 
-// actions
-function toggleMenu() {
-  displayMenu = !displayMenu
-}
 </script>
 
 <template>
@@ -21,7 +17,7 @@ function toggleMenu() {
   <span v-if="displayMenu">
     <SubNav @close="displayMenu = false"></SubNav>    
   </span>
-  <MobileNav></MobileNav>
+  <MobileNav @toggle="displayMenu = !displayMenu"></MobileNav>
   
   <main>
     <RouterView/>   

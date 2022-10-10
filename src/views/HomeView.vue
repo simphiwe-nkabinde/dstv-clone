@@ -39,7 +39,6 @@ const promos = [
 
 .grad-sect {
   background: linear-gradient(180deg, rgba(1, 0, 22, 0) 0%, rgb(1, 0, 54) 30%, rgb(1, 0, 22) 100%);
-  height: 100px;
   width: 100%;
   margin-top: -30px;
   /* position: relative; */
