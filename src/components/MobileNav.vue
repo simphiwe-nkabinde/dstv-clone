@@ -4,6 +4,9 @@ import IconCart from './icons/IconCart.vue';
 import IconClock from './icons/IconClock.vue';
 import IconSearch from './icons/IconSearch.vue';
 import IconBurger from './icons/IconBurger.vue';
+import IconX from './icons/IconX.vue';
+
+const props = defineProps(['display'])
 
 const menuItems = [
     {name: 'Watch', icon: IconPlayCircle},
@@ -34,7 +37,8 @@ const menuItems = [
             <span class="text-xs">{{menuItems[3].name}}</span>
         </button>
         <button @click="$emit('toggle')" class="border-opacity-20 w-full bg-white border border-gray-300 border-opacity-20 px- py-1 rounded text-center text-black">
-            <IconBurger class="w-10 mx-auto"/>
+            <IconBurger v-if="!props.display" class="w-10 mx-auto ss-center"/>
+            <IconX v-if="props.display" class="w-10 mx-auto ss-center"/>
             <span class="text-xs">{{menuItems[4].name}}</span>
         </button>
     </div>

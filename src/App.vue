@@ -7,7 +7,7 @@ import HomeView from './views/HomeView.vue';
 import { ref } from 'vue'
 import MobileNav from './components/MobileNav.vue';
 
-let displayMenu = ref(true)
+const displayMenu = ref(true)
 
 </script>
 
@@ -17,7 +17,7 @@ let displayMenu = ref(true)
   <span v-if="displayMenu">
     <SubNav @close="displayMenu = false"></SubNav>    
   </span>
-  <MobileNav @toggle="displayMenu = !displayMenu"></MobileNav>
+  <MobileNav @toggle="displayMenu = !displayMenu" :display="displayMenu"></MobileNav>
   
   <main>
     <RouterView/>   
