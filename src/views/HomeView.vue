@@ -11,7 +11,9 @@ const promos = [
 </script>
 
 <template>
-  <section id="jumbotron" class="text-white px-20 pt-44 pb-2 grid grid-cols-2 grid-rows-2">
+  <section id="jumbotron" class="text-white pt-20 pb-2 grid-cols-2 grid-rows-2">
+    <div class="img-soft-eddge"></div>
+
     <div class="hidden">
       <p class="uppercase mb-3 font-bold">{{banner.category}}</p>
       <h1 class="text-5xl font-bold">{{banner.title}}</h1>
@@ -27,18 +29,18 @@ const promos = [
       </button>
     </div>
   </section>
-  <div class="grad-sect"></div>
+
 </template>
 
 <style>
 #jumbotron {
-  background: linear-gradient(90deg, rgb(1, 0, 22) 0%, rgb(1, 1, 54) 55%, rgb(0, 55, 66) 100%), no-repeat right top;
+  background: linear-gradient(270deg, rgb(1, 0, 22) 0%, rgb(1, 1, 54) 55%, rgb(0, 55, 66) 100%), no-repeat right top;
   background-size: contain;
   height: 100vh;
 }
 
 .grad-sect {
-  background: linear-gradient(180deg, rgba(1, 0, 22, 0) 0%, rgb(1, 0, 54) 30%, rgb(1, 0, 22) 100%);
+  background: linear-gradient(270deg, rgba(1, 0, 22, 0) 0%, rgb(1, 0, 54) 30%, rgb(1, 0, 22) 100%);
   width: 100%;
   margin-top: -30px;
   /* position: relative; */
@@ -47,6 +49,14 @@ const promos = [
 .bg-dark-blue {
   background-color: #010017;
   /* box-shadow: 0 0 200px #1c1d25 inset; */
+}
+.img-soft-eddge {
+  margin-left: auto;
+  width: 20rem;
+  height: 20rem;
+  background-image: url('https://picsum.photos/500');	
+  /* you need to match the shadow color to your background or image border for the desired effect*/
+  box-shadow: 20px -20px 20px 12px rgb(2 2 23) inset;
 }
 
 </style>
